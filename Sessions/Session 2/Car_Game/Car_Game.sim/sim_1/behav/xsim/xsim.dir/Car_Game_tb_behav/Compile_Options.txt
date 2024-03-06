@@ -1,0 +1,1 @@
+-wto "af9a9b460d0a4764bef453a338c896c1" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "Car_Game_tb_behav" "xil_defaultlib.Car_Game_tb" -log "elaborate.log" 

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Feb 17 00:41:33 2024
+# Process ID: 3060
+# Current directory: C:/Users/Ali/Desktop/Vivado/VGA_ALI
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13836 C:\Users\Ali\Desktop\Vivado\VGA_ALI\VGA_ALI.xpr
+# Log file: C:/Users/Ali/Desktop/Vivado/VGA_ALI/vivado.log
+# Journal file: C:/Users/Ali/Desktop/Vivado/VGA_ALI\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Ali/Desktop/Vivado/VGA_ALI/VGA_ALI.xpr
+update_compile_order -fileset sources_1

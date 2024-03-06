@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Mar  1 01:19:18 2024
+# Process ID: 17784
+# Current directory: C:/Users/Ali/Desktop/Vivado/VGA_Moving_Image/VGA_Moving_Image.runs/impl_1
+# Command line: vivado.exe -log VGA_Moving_Image.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source VGA_Moving_Image.tcl -notrace
+# Log file: C:/Users/Ali/Desktop/Vivado/VGA_Moving_Image/VGA_Moving_Image.runs/impl_1/VGA_Moving_Image.vdi
+# Journal file: C:/Users/Ali/Desktop/Vivado/VGA_Moving_Image/VGA_Moving_Image.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source VGA_Moving_Image.tcl -notrace

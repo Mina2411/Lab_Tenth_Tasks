@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../VGA.srcs/sources_1/new/Clock_scale.vhd" \
+"../../../../VGA.srcs/sources_1/new/VGA_Display.vhd" \
+"../../../../VGA.srcs/sources_1/new/Wrapper.vhd" \
+"../../../../VGA.srcs/sim_1/new/Wrapper_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Feb 29 01:56:30 2024
+# Process ID: 5172
+# Current directory: C:/Users/Mina/Downloads/VGA_TASK2_FINAL/VGA_TASK2_FINAL.runs/synth_1
+# Command line: vivado.exe -log VGA_Display.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA_Display.tcl
+# Log file: C:/Users/Mina/Downloads/VGA_TASK2_FINAL/VGA_TASK2_FINAL.runs/synth_1/VGA_Display.vds
+# Journal file: C:/Users/Mina/Downloads/VGA_TASK2_FINAL/VGA_TASK2_FINAL.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source VGA_Display.tcl -notrace
