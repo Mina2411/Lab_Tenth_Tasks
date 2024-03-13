@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1709763778">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710344845">
   <File Type="BITSTR-BMM" Name="Car_Game_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Car_Game_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Car_Game_timing_summary_init.rpt"/>
@@ -95,12 +95,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/Car Obstacle.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/Car.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -145,4 +139,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_2"/>
 </GenRun>

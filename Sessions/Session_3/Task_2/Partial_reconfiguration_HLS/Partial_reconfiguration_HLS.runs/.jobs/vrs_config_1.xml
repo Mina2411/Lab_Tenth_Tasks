@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="multiplier_synth_1" LaunchDir="D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session_3/Task_2/Partial_reconfiguration_HLS/Partial_reconfiguration_HLS.runs/multiplier_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session_3/Task_2/Partial_reconfiguration_HLS/Partial_reconfiguration_HLS.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="multiplier_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -8,8 +8,8 @@ entity Car_Game is
  Port (
         clk   : in  std_logic;
         right,left: in std_logic;
-        Hsync : out std_logic := '1';
-        Vsync : out std_logic := '1';
+        Hsync : out std_logic;
+        Vsync : out std_logic;
         R_out : out std_logic_vector(3 downto 0);
         G_out : out std_logic_vector(3 downto 0);
         B_out : out std_logic_vector(3 downto 0)
@@ -23,7 +23,7 @@ component blk_mem_gen_0 is
         clka : IN STD_LOGIC;
         ena : IN STD_LOGIC;
         wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        addra : IN STD_LOGIC_VECTOR(17  DOWNTO 0);
+        addra : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
         dina : IN STD_LOGIC_VECTOR(11 DOWNTO 0);  
         douta : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
   );
@@ -40,17 +40,31 @@ component blk_mem_gen_1 is
   );
 end component;
 
+component blk_mem_gen_2 is
+  PORT (
+        clka : IN STD_LOGIC;
+        ena : IN STD_LOGIC;
+        wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        addra : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
+        dina : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+        douta : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
+  );
+end component;
+
 --ClockScaling
     shared variable counter : integer := 0;
     signal clk25: std_logic := '0';
     --12 Bits RGB Extraction from memory
     signal RGB_sig_road: std_logic_vector(11 downto 0);
     --16 bits memory address
-    signal address_road : STD_LOGIC_VECTOR(17 downto 0) := (others => '0');
+    signal address_road : STD_LOGIC_VECTOR(16 downto 0) := (others => '0');
         
     signal RGB_sig_car: std_logic_vector(11 downto 0);
     --16 bits memory address
     signal address_car : STD_LOGIC_VECTOR(10 downto 0) := (others => '0');
+    
+    signal RGB_sig_obstacle: std_logic_vector(11 downto 0);
+    signal address_obstacle : STD_LOGIC_VECTOR(10 downto 0) := (others => '0');
     
     --HorizontalValues
     constant H_RES    : integer := 640;
@@ -69,11 +83,17 @@ end component;
     shared variable Car_left : integer := 300;
     shared variable Car_right : integer := Car_left + Car_Len;   
     --Obstacle 
---    shared variable obstacle_Len : integer := 10;
---    shared variable obstacle_top : integer := 150; 
---    shared variable obstacle_bot : integer := obstacle_top + obstacle_Len;
---    shared variable obstacle_left : integer := 250;
---    shared variable obstacle_right : integer := obstacle_left + obstacle_Len; 
+    shared variable obstacle_Len : integer := 40;
+    shared variable obstacle_top : integer := 50; 
+    shared variable obstacle_bot : integer := obstacle_top + obstacle_Len;
+    shared variable obstacle_left : integer := 250;
+    shared variable obstacle_right : integer := obstacle_left + obstacle_Len; 
+
+    shared variable X_coordinate : integer := 0;
+    shared variable Y_coordinate : integer := 0; 
+    
+    constant obstacle_location: integer := 20;
+
 begin
  clock_generation : process (clk)--ClockScaling Process
     begin
@@ -89,7 +109,7 @@ begin
 
     Blk_Ram_Road: blk_mem_gen_0 port map(clk25,'1',"0", address_road, (others => '0'), RGB_sig_road);--Block memory assignment
     Blk_Ram_Car: blk_mem_gen_1 port map(clk25,'1',"0", address_car, (others => '0'), RGB_sig_car);--Block memory assignment
-    --Blk_Ram_Car_obstacle: blk_mem_gen_2 port map(clk25,'1',"0", address_car_obstacle, (others => '0'), RGB_sig_car_obstacle);--Block memory assignment
+    Blk_Ram_Car_obstacle: blk_mem_gen_2 port map(clk25,'1',"0", address_obstacle, (others => '0'), RGB_sig_obstacle);--Block memory assignment
 
     
     process (clk25)
@@ -98,24 +118,25 @@ begin
         variable delay_counter : integer := 0;
         variable delay : integer := 75000;
         variable move_road : integer := 1;
-        --variable obstacle_location: integer := 1;
+        variable change_obstacle_horizontal_position: integer := 10;
+        variable change_obstacle_vertical_position: integer := 1;
     begin
         if rising_edge(clk25) then
             if HC < H_RES + H_FP + H_SYNC + H_BP then --HorizontalActiveArea---800
                 if HC <= H_RES then --VisibleArea
-                    if((HC >= 170 and HC < 470)) then 
+                    if((HC >= 220 and HC < 420)) then 
                         if((HC >= Car_left and HC < Car_right) and (VC >= Car_top and VC < Car_bot)) then
                             R_out <= RGB_sig_Car(11 downto 8);
                             G_out <= RGB_sig_Car(7 downto 4);
                             B_out <= RGB_sig_Car(3 downto 0);
                             address_car <= address_car + 1;
                             address_road <= address_road + 1;
---                        elsif((HC >= obstacle_left and HC < obstacle_right) and (VC >= obstacle_top and VC < obstacle_bot)) then
---                            R_out <= RGB_sig_car(11 downto 8);
---                            G_out <= RGB_sig_car(7 downto 4);
---                            B_out <= RGB_sig_car(3 downto 0);
---                            address_car <= address_car + 1;
---                            address_road <= address_road + 1;                            
+                        elsif((HC >= obstacle_left and HC < obstacle_right) and (VC >= obstacle_top and VC < obstacle_bot)) then
+                            R_out <= RGB_sig_obstacle(11 downto 8);
+                            G_out <= RGB_sig_obstacle(7 downto 4);
+                            B_out <= RGB_sig_obstacle(3 downto 0);
+                            address_obstacle <= address_obstacle + 1;
+                            address_road <= address_road + 1;                            
                         else
                             R_out <= RGB_sig_Road(11 downto 8);
                             G_out <= RGB_sig_Road(7 downto 4);
@@ -168,24 +189,42 @@ begin
                         else
                             Vsync <= '1';
                         end if;
+                        
                         VC := VC + 1;
-                        if(address_road >= 143999) then
+                        
+                        if(address_road >= 95999) then
                             address_road <= (others => '0');
                         end if;
+                        
                     else --ResetVC
                         VC := 1;
-                        address_car <= (others => '0');--resetting the address after each frame
+                        address_car <= (others => '0'); --resetting the address after each frame
+                        address_obstacle <= (others => '0');
+
+                        if(change_obstacle_vertical_position = 10) then 
+                            change_obstacle_vertical_position := 0;
+                            obstacle_top := obstacle_top + obstacle_location;
+                            
+                            if(obstacle_top >= 480) then
+                                obstacle_top := 0;
+                                if(obstacle_left >= 330) then 
+                                    obstacle_left := 250;
+                                else
+                                    obstacle_left := obstacle_left + change_obstacle_horizontal_position;
+                                end if;      
+                            end if;
+                            
+                        else
+                            change_obstacle_vertical_position := change_obstacle_vertical_position + 1;
+                        end if;
+
                         if(move_road = 480) then
                             move_road := 1;
                         else 
                             move_road := move_road + 1;
                         end if;
-                        address_road <= std_logic_vector(TO_UNSIGNED((143999 - (300 * move_road)) + 1,18)); --Move the road
-                        --obstacle_left := obstacle_left + obstacle_location;
-                        --obstacle_location := obstacle_location + 1;
-                        --if(obstacle_left = 400) then 
-                        --    obstacle_left := 250;
-                        --end if;
+                        
+                        address_road <= std_logic_vector(TO_UNSIGNED((95999 - (200 * move_road)) + 1,17)); --Move the road
                     end if;   
             end if; --HorizontalActiveArea
         end if; -- risingEdge

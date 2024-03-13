@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "blk_mem_gen_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -91,7 +89,7 @@ set_property ip_output_repo {d:/GUC/Semester_10/Advanced Microelectronics Lab/Se
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet {{d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+read_ip -quiet {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
 set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Adder.cpp" path="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1\four_bit_adder\Adder.cpp"/>
+    <originFiles name="Adder.h" path="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1\four_bit_adder\Adder.h"/>
+    <originFiles name="Not_gate.cpp" path="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1\four_bit_adder\Not_gate.cpp"/>
+    <originFiles name="Not_gate.h" path="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1\four_bit_adder\Not_gate.h"/>
+  </source>
+  <testbench>
+    <originFiles name="Adder_tb.cpp" path="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1\four_bit_adder\Adder_tb.cpp"/>
+    <originFiles name="Not_gate_tb.cpp" path="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1\four_bit_adder\Not_gate_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

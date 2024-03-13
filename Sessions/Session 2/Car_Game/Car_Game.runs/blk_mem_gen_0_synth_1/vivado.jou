@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Mar  6 01:08:07 2024
-# Process ID: 16288
+# Start of session at: Thu Mar  7 09:47:38 2024
+# Process ID: 5916
 # Current directory: D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
 # Log file: D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds

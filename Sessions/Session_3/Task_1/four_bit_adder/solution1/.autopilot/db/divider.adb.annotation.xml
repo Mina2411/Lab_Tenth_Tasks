@@ -1,0 +1,6 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="10" filename="four_bit_adder/Adder.cpp" linenumber="14" name="ret_V" contextFuncName="divider" moduleName="divider" rtlName="divider_udiv_4ns_bkb_U1" latency="7" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1"><\/item>
+<item  id="11" filename="four_bit_adder/Adder.cpp" linenumber="14" name="zext_ln209" contextFuncName="divider" moduleName="divider" rtlName="out_V" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_3\Task_1"><\/item>
+<\/annotationInfo>
+</annotationInfo>

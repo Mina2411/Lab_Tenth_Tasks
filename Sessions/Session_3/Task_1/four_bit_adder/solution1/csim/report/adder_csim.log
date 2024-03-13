@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../Not_gate_tb.cpp in debug mode
+   Compiling ../../../Not_gate.cpp in debug mode
+   Generating csim.exe
+the value of the output is 1
+True!
+the value of the output is 0
+True!
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

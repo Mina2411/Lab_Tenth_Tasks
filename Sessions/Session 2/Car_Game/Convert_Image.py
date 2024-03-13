@@ -1,6 +1,6 @@
 from PIL import Image
 # Load the image
-image = Image.open("Car.png")
+image = Image.open("Car_Obstacle.png")
 # Resize the image to 300x300
 image = image.resize((40, 40))
 # Convert image to RGB mode (if not already in RGB)
@@ -20,7 +20,7 @@ def convert_to_12_bit(pixel):
 # Convert each pixel to 12-bit representation
 pixels_12_bit = [convert_to_12_bit(pixel) for pixel in pixel_data]
 # Open a text file in write mode
-with open("Car.txt", "w") as file:
+with open("Car_Obstacle.txt", "w") as file:
     # Write each pixel value in binary format to the file
     for pixel in pixels_12_bit:
         # Convert the pixel value to binary format with 12 bits
@@ -29,11 +29,11 @@ with open("Car.txt", "w") as file:
         file.write(pixel_binary + '\n')
 
 # Open the original text file for reading
-with open("Car.txt", "r") as original_file:
+with open("Car_Obstacle.txt", "r") as original_file:
     # Read the lines from the original file
     lines = original_file.readlines()
 # Open a new text file for writing
-with open("Car.coe", "w") as new_file:
+with open("Car_Obstacle.coe", "w") as new_file:
     # Write each line with a comma appended at the end
     for line in lines:
         # Strip any existing newline characters and append a comma

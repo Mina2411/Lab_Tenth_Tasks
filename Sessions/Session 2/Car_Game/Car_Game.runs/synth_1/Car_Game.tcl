@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/Car_Game.tcl"
+  variable script "D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/Car_Game.tcl"
   variable category "vivado_synth"
 }
 
@@ -80,26 +80,28 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.cache/wt} [current_project]
-set_property parent.project_path {D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.xpr} [current_project]
+set_property webtalk.parent_dir {D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.cache/wt} [current_project]
+set_property parent.project_path {D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo {d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.cache/ip} [current_project]
+set_property ip_output_repo {d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/image33.coe}}
-add_files {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Road.coe}}
-add_files {{d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car Obstacle.coe}}
-add_files {{d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car.coe}}
-read_vhdl -library xil_defaultlib {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd}}
-read_ip -quiet {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
-set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
+add_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/image33.coe}}
+add_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Road.coe}}
+add_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car.coe}}
+read_vhdl -library xil_defaultlib {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd}}
+read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
 
-read_ip -quiet {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
-set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc}}]
+read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
+set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc}}]
+
+read_ip -quiet {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci}}
+set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -110,8 +112,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Basys-3-Master-NoInputs.xdc}}
-set_property used_in_implementation false [get_files {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Car_Game/Basys-3-Master-NoInputs.xdc}}]
+read_xdc {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Basys-3-Master-NoInputs.xdc}}
+set_property used_in_implementation false [get_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Basys-3-Master-NoInputs.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

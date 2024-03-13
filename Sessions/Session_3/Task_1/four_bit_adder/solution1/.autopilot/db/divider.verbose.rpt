@@ -1,0 +1,500 @@
+
+
+================================================================
+== Vivado HLS Report for 'divider'
+================================================================
+* Date:           Sat Mar  9 23:48:13 2024
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        four_bit_adder
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 2.941 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7| 70.000 ns | 70.000 ns |    7|    7|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      -|      -|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |        -|      -|     58|     23|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|     44|    -|
+|Register         |        -|      -|      8|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        0|      0|     66|     67|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      100|     90|  41600|  20800|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0  |   ~0  |    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E| FF | LUT| URAM|
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+    |divider_udiv_4ns_bkb_U1  |divider_udiv_4ns_bkb  |        0|      0|  58|  23|    0|
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+    |Total                    |                      |        0|      0|  58|  23|    0|
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  44|          9|    1|          9|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  44|          9|    1|          9|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  8|   0|    8|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  8|   0|    8|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------+-----+-----+------------+--------------+--------------+
+|ap_clk        |  in |    1| ap_ctrl_hs |    divider   | return value |
+|ap_rst        |  in |    1| ap_ctrl_hs |    divider   | return value |
+|ap_start      |  in |    1| ap_ctrl_hs |    divider   | return value |
+|ap_done       | out |    1| ap_ctrl_hs |    divider   | return value |
+|ap_idle       | out |    1| ap_ctrl_hs |    divider   | return value |
+|ap_ready      | out |    1| ap_ctrl_hs |    divider   | return value |
+|out_V         | out |    8|   ap_vld   |     out_V    |    pointer   |
+|out_V_ap_vld  | out |    1|   ap_vld   |     out_V    |    pointer   |
+|in1_V         |  in |    4|   ap_none  |     in1_V    |    scalar    |
+|in2_V         |  in |    4|   ap_none  |     in2_V    |    scalar    |
++--------------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.94>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%in2_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %in2_V)" [four_bit_adder/Adder.cpp:13]   --->   Operation 9 'read' 'in2_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%in1_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %in1_V)" [four_bit_adder/Adder.cpp:13]   --->   Operation 10 'read' 'in1_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [8/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 11 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.94>
+ST_2 : Operation 12 [7/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 12 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.94>
+ST_3 : Operation 13 [6/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 13 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.94>
+ST_4 : Operation 14 [5/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 14 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.94>
+ST_5 : Operation 15 [4/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 15 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.94>
+ST_6 : Operation 16 [3/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 16 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.94>
+ST_7 : Operation 17 [2/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 17 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.94>
+ST_8 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_V), !map !45"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %in1_V), !map !51"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %in2_V), !map !57"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @divider_str) nounwind"   --->   Operation 21 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 22 [1/8] (2.94ns)   --->   "%ret_V = udiv i4 %in1_V_read, %in2_V_read" [four_bit_adder/Adder.cpp:14]   --->   Operation 22 'udiv' 'ret_V' <Predicate = true> <Delay = 2.94> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 7> <II = 4> <Delay = 2.94> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i4 %ret_V to i8" [four_bit_adder/Adder.cpp:14]   --->   Operation 23 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 24 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_V, i8 %zext_ln209)" [four_bit_adder/Adder.cpp:14]   --->   Operation 24 'write' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "ret void" [four_bit_adder/Adder.cpp:15]   --->   Operation 25 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ out_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ in1_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ in2_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+in2_V_read        (read         ) [ 001111111]
+in1_V_read        (read         ) [ 001111111]
+specbitsmap_ln0   (specbitsmap  ) [ 000000000]
+specbitsmap_ln0   (specbitsmap  ) [ 000000000]
+specbitsmap_ln0   (specbitsmap  ) [ 000000000]
+spectopmodule_ln0 (spectopmodule) [ 000000000]
+ret_V             (udiv         ) [ 000000000]
+zext_ln209        (zext         ) [ 000000000]
+write_ln14        (write        ) [ 000000000]
+ret_ln15          (ret          ) [ 000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="out_V">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="in1_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in1_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="in2_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in2_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="divider_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_auto.i8P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1004" name="in2_V_read_read_fu_16">
+<pin_list>
+<pin id="17" dir="0" index="0" bw="4" slack="0"/>
+<pin id="18" dir="0" index="1" bw="4" slack="0"/>
+<pin id="19" dir="1" index="2" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="in2_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="22" class="1004" name="in1_V_read_read_fu_22">
+<pin_list>
+<pin id="23" dir="0" index="0" bw="4" slack="0"/>
+<pin id="24" dir="0" index="1" bw="4" slack="0"/>
+<pin id="25" dir="1" index="2" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="in1_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="28" class="1004" name="write_ln14_write_fu_28">
+<pin_list>
+<pin id="29" dir="0" index="0" bw="0" slack="0"/>
+<pin id="30" dir="0" index="1" bw="8" slack="0"/>
+<pin id="31" dir="0" index="2" bw="4" slack="0"/>
+<pin id="32" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln14/8 "/>
+</bind>
+</comp>
+
+<comp id="35" class="1004" name="grp_fu_35">
+<pin_list>
+<pin id="36" dir="0" index="0" bw="4" slack="0"/>
+<pin id="37" dir="0" index="1" bw="4" slack="0"/>
+<pin id="38" dir="1" index="2" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="udiv(14) " fcode="udiv"/>
+<opset="ret_V/1 "/>
+</bind>
+</comp>
+
+<comp id="41" class="1004" name="zext_ln209_fu_41">
+<pin_list>
+<pin id="42" dir="0" index="0" bw="4" slack="0"/>
+<pin id="43" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln209/8 "/>
+</bind>
+</comp>
+
+<comp id="46" class="1005" name="in2_V_read_reg_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="4" slack="1"/>
+<pin id="48" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="in2_V_read "/>
+</bind>
+</comp>
+
+<comp id="51" class="1005" name="in1_V_read_reg_51">
+<pin_list>
+<pin id="52" dir="0" index="0" bw="4" slack="1"/>
+<pin id="53" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="in1_V_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="20"><net_src comp="6" pin="0"/><net_sink comp="16" pin=0"/></net>
+
+<net id="21"><net_src comp="4" pin="0"/><net_sink comp="16" pin=1"/></net>
+
+<net id="26"><net_src comp="6" pin="0"/><net_sink comp="22" pin=0"/></net>
+
+<net id="27"><net_src comp="2" pin="0"/><net_sink comp="22" pin=1"/></net>
+
+<net id="33"><net_src comp="14" pin="0"/><net_sink comp="28" pin=0"/></net>
+
+<net id="34"><net_src comp="0" pin="0"/><net_sink comp="28" pin=1"/></net>
+
+<net id="39"><net_src comp="22" pin="2"/><net_sink comp="35" pin=0"/></net>
+
+<net id="40"><net_src comp="16" pin="2"/><net_sink comp="35" pin=1"/></net>
+
+<net id="44"><net_src comp="35" pin="2"/><net_sink comp="41" pin=0"/></net>
+
+<net id="45"><net_src comp="41" pin="1"/><net_sink comp="28" pin=2"/></net>
+
+<net id="49"><net_src comp="16" pin="2"/><net_sink comp="46" pin=0"/></net>
+
+<net id="50"><net_src comp="46" pin="1"/><net_sink comp="35" pin=1"/></net>
+
+<net id="54"><net_src comp="22" pin="2"/><net_sink comp="51" pin=0"/></net>
+
+<net id="55"><net_src comp="51" pin="1"/><net_sink comp="35" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: out_V | {8 }
+ - Input state : 
+	Port: divider : in1_V | {1 }
+	Port: divider : in2_V | {1 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+		zext_ln209 : 1
+		write_ln14 : 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------|---------|---------|
+| Operation|     Functional Unit    |    FF   |   LUT   |
+|----------|------------------------|---------|---------|
+|   udiv   |        grp_fu_35       |    58   |    23   |
+|----------|------------------------|---------|---------|
+|   read   |  in2_V_read_read_fu_16 |    0    |    0    |
+|          |  in1_V_read_read_fu_22 |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   write  | write_ln14_write_fu_28 |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   zext   |    zext_ln209_fu_41    |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   Total  |                        |    58   |    23   |
+|----------|------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-----------------+--------+
+|                 |   FF   |
++-----------------+--------+
+|in1_V_read_reg_51|    4   |
+|in2_V_read_reg_46|    4   |
++-----------------+--------+
+|      Total      |    8   |
++-----------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_35 |  p0  |   2  |   4  |    8   ||    9    |
+| grp_fu_35 |  p1  |   2  |   4  |    8   ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   16   ||  3.328  ||    18   |
+|-----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |   58   |   23   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    3   |    -   |   18   |
+|  Register |    -   |    8   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    3   |   66   |   41   |
++-----------+--------+--------+--------+
