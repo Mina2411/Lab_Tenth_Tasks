@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.runs/impl_1'
+HD_PWD='D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

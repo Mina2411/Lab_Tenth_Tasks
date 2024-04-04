@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.runs/synth_1/VGA_Moving_Image.tcl"
+  variable script "D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.runs/synth_1/VGA_Moving_Image.tcl"
   variable category "vivado_synth"
 }
 
@@ -79,19 +79,19 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.cache/wt} [current_project]
-set_property parent.project_path {D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.xpr} [current_project]
+set_property webtalk.parent_dir {D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.cache/wt} [current_project]
+set_property parent.project_path {D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.cache/ip} [current_project]
+set_property ip_output_repo {d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/Doctor.coe}}
-read_vhdl -library xil_defaultlib {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/new/VGA_Moving_Image.vhd}}
-read_ip -quiet {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
-set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc}}]
+add_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/Doctor.coe}}
+read_vhdl -library xil_defaultlib {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/new/VGA_Moving_Image.vhd}}
+read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -102,8 +102,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Basys-3-Master-NoInputs.xdc}}
-set_property used_in_implementation false [get_files {{D:/GUC/Semester_10/Advanced Microelectronics Lab/Sessions/Session 2/Basys-3-Master-NoInputs.xdc}}]
+read_xdc {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/Basys-3-Master.xdc}}
+set_property used_in_implementation false [get_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/Basys-3-Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

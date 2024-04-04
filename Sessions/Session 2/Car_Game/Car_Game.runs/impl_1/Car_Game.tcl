@@ -114,7 +114,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -141,7 +140,7 @@ OPTRACE "add files" START { }
   add_files -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/Car_Game.dcp}}
   read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
   read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
-  read_ip -quiet {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci}}
+  read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci}}
 OPTRACE "read constraints: implementation" START { }
   read_xdc {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Basys-3-Master-NoInputs.xdc}}
 OPTRACE "read constraints: implementation" END { }

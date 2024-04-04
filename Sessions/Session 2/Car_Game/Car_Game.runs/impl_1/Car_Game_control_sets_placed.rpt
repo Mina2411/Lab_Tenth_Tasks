@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Mar 13 17:51:29 2024
+| Date         : Thu Mar 14 02:00:08 2024
 | Host         : DESKTOP-FVC51P8 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Car_Game_control_sets_placed.rpt
 | Design       : Car_Game
@@ -73,13 +73,13 @@ Table of Contents
 +----------------+---------------------------+-----------------------------------------------+------------------+----------------+--------------+
 |  Clock Signal  |       Enable Signal       |                Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+---------------------------+-----------------------------------------------+------------------+----------------+--------------+
-|  clka_BUFG     | R_out1                    | Hsync_i_1_n_0                                 |                1 |              1 |         1.00 |
-|  clka_BUFG     | Vsync2_out                | Vsync_i_1_n_0                                 |                1 |              1 |         1.00 |
+|  clka_BUFG     | R_sig_out1                | Hsync_out                                     |                1 |              1 |         1.00 |
+|  clka_BUFG     | Vsync_out2_out            | Vsync_out                                     |                1 |              1 |         1.00 |
 |  clk_IBUF_BUFG |                           |                                               |                2 |              2 |         1.00 |
 |  clka_BUFG     | Car_left[9]_i_2_n_0       | Car_left[9]_i_1_n_0                           |                4 |              6 |         1.50 |
-|  clka_BUFG     | address_car[10]_i_1_n_0   | address_car                                   |                3 |             11 |         3.67 |
 |  clka_BUFG     | address_obstacle          | address_car                                   |                3 |             11 |         3.67 |
-|  clka_BUFG     | R_out[3]_i_2_n_0          | R_out[3]_i_1_n_0                              |                5 |             12 |         2.40 |
+|  clka_BUFG     | address_car[10]_i_1_n_0   | address_car                                   |                3 |             11 |         3.67 |
+|  clka_BUFG     | R_sig_out                 | R_sig_out[3]_i_1_n_0                          |                5 |             12 |         2.40 |
 |  clka_BUFG     |                           |                                               |                7 |             14 |         2.00 |
 |  clka_BUFG     | address_road[0]_i_2_n_0   | address_road[0]_i_1_n_0                       |                5 |             17 |         3.40 |
 |  clka_BUFG     | Car_left[31]_i_2_n_0      | Car_left[31]_i_1_n_0                          |               10 |             26 |         2.60 |

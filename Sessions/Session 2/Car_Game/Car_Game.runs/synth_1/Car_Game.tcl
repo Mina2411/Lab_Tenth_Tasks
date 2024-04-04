@@ -72,7 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -93,6 +92,7 @@ OPTRACE "Adding files" START { }
 add_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/image33.coe}}
 add_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Road.coe}}
 add_files {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car.coe}}
+add_files {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Obstacle.coe}}
 read_vhdl -library xil_defaultlib {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd}}
 read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
 set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
@@ -100,7 +100,7 @@ set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/A
 read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
 set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc}}]
 
-read_ip -quiet {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci}}
+read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci}}
 set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }

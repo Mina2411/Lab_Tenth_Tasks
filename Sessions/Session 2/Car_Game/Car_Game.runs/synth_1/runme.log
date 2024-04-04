@@ -10,6 +10,7 @@
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 source Car_Game.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1026.750 ; gain = 0.000
 Command: synth_design -top Car_Game -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
@@ -17,44 +18,43 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4868
+INFO: [Synth 8-7075] Helper process launched with PID 6676
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1037.824 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1026.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Car_Game' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:19]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:55]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:80]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:81]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:82]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:83]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:84]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:86]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:87]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:88]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:89]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:90]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:91]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:92]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:93]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-13860-DESKTOP-FVC51P8/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'Blk_Ram_Road' of component 'blk_mem_gen_0' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:110]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-13860-DESKTOP-FVC51P8/realtime/blk_mem_gen_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-13860-DESKTOP-FVC51P8/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'Blk_Ram_Car' of component 'blk_mem_gen_1' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:111]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-13860-DESKTOP-FVC51P8/realtime/blk_mem_gen_1_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'blk_mem_gen_2' declared at 'D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-13860-DESKTOP-FVC51P8/realtime/blk_mem_gen_2_stub.vhdl:5' bound to instance 'Blk_Ram_Car_obstacle' of component 'blk_mem_gen_2' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_2' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-13860-DESKTOP-FVC51P8/realtime/blk_mem_gen_2_stub.vhdl:17]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:94]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:96]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:97]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:98]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:99]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:100]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:102]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-9624-DESKTOP-FVC51P8/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'Blk_Ram_Road' of component 'blk_mem_gen_0' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-9624-DESKTOP-FVC51P8/realtime/blk_mem_gen_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-9624-DESKTOP-FVC51P8/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'Blk_Ram_Car' of component 'blk_mem_gen_1' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-9624-DESKTOP-FVC51P8/realtime/blk_mem_gen_1_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'blk_mem_gen_2' declared at 'D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-9624-DESKTOP-FVC51P8/realtime/blk_mem_gen_2_stub.vhdl:5' bound to instance 'Blk_Ram_Car_obstacle' of component 'blk_mem_gen_2' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_2' [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/.Xil/Vivado-9624-DESKTOP-FVC51P8/realtime/blk_mem_gen_2_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'Car_Game' (1#1) [D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.srcs/sources_1/new/Car_Game.vhd:19]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1079.598 ; gain = 41.773
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1079.934 ; gain = 53.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1079.598 ; gain = 41.773
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1079.934 ; gain = 53.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1079.598 ; gain = 41.773
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1079.934 ; gain = 53.184
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1079.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1079.934 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -71,20 +71,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Car_Game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1195.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1196.914 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1195.664 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1196.914 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1195.664 ; gain = 157.840
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1196.914 ; gain = 170.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1195.664 ; gain = 157.840
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1196.914 ; gain = 170.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -93,10 +93,10 @@ Applied set_property DONT_TOUCH = true for Blk_Ram_Road. (constraint file  auto 
 Applied set_property DONT_TOUCH = true for Blk_Ram_Car. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Blk_Ram_Car_obstacle. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1195.664 ; gain = 157.840
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1196.914 ; gain = 170.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1195.664 ; gain = 157.840
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1196.914 ; gain = 170.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -141,7 +141,7 @@ Start Cross Boundary and Area Optimization
 DSP Report: Generating DSP address_road2, operation Mode is: A*(B:0xc8).
 DSP Report: operator address_road2 is absorbed into DSP address_road2.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1195.664 ; gain = 157.840
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1196.914 ; gain = 170.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -162,19 +162,19 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1218.281 ; gain = 180.457
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 1217.813 ; gain = 191.063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1239.516 ; gain = 201.691
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 1238.828 ; gain = 212.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1240.160 ; gain = 202.336
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:58 . Memory (MB): peak = 1239.848 ; gain = 213.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -192,37 +192,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1246.621 ; gain = 219.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1246.621 ; gain = 219.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1246.621 ; gain = 219.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1246.621 ; gain = 219.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1246.621 ; gain = 219.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1246.621 ; gain = 219.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -259,26 +259,26 @@ Report Cell Usage:
 |16    |OBUF               |    14|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1246.621 ; gain = 219.871
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 1244.945 ; gain = 91.055
-Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1244.945 ; gain = 207.121
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:01:01 . Memory (MB): peak = 1246.621 ; gain = 102.891
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1246.621 ; gain = 219.871
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1257.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1258.688 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'Car_Game' is not ideal for floorplanning, since the cellview 'Car_Game' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1257.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1258.688 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+23 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:43 . Memory (MB): peak = 1257.000 ; gain = 219.176
+synth_design: Time (s): cpu = 00:01:38 ; elapsed = 00:01:58 . Memory (MB): peak = 1258.688 ; gain = 231.938
 INFO: [Common 17-1381] The checkpoint 'D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Car_Game/Car_Game.runs/synth_1/Car_Game.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Car_Game_utilization_synth.rpt -pb Car_Game_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 13 17:49:31 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 14 01:57:57 2024...
