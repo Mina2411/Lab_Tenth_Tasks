@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 // Date        : Wed Apr  3 20:08:24 2024
 // Host        : DESKTOP-FVC51P8 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session
-//               2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v}
+// Command     : write_verilog -force -mode synth_stub -rename_top blk_mem_gen_0 -prefix
+//               blk_mem_gen_0_ blk_mem_gen_0_stub.v
 // Design      : blk_mem_gen_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35ticpg236-1L

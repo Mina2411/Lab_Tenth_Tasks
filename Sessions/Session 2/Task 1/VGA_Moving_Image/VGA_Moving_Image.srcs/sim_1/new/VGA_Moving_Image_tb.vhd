@@ -28,12 +28,12 @@ begin
     uut: VGA_Moving_Image port map(clk,reset,right,left,up,down,Hsync,Vsync,R_out,G_out,B_out);
     
     clk_process: process begin
-        clk <= '0'; wait for 2ns;
-        clk <= '1'; wait for 2ns;
+        clk <= '0'; wait for 2ps;
+        clk <= '1'; wait for 2ps;
     end process;
     
     stimulus_process: process begin
-        down <=  '1'; wait;    
+        right <=  '1'; wait;    
     end process;
 
 end Behavioral;

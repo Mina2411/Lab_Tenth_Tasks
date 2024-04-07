@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Car_Game.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_sim_netlist.vhdl" \
+"../../../../Car_Game.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.vhdl" \
+"../../../../Car_Game.srcs/sources_1/new/Car_Game.vhd" \
+"../../../../Car_Game.srcs/sim_1/new/Car_Game_tb.vhd" \
+
+# Do not sort compile order
+nosort

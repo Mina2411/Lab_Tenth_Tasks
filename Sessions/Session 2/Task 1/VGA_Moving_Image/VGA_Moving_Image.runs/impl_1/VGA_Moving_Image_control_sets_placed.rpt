@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Apr  4 02:16:53 2024
+| Date         : Sun Apr  7 18:20:48 2024
 | Host         : DESKTOP-FVC51P8 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file VGA_Moving_Image_control_sets_placed.rpt
 | Design       : VGA_Moving_Image
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    15 |
-|    Minimum number of control sets                        |    15 |
+| Total control sets                                       |    19 |
+|    Minimum number of control sets                        |    19 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    37 |
+| Unused register locations in slices containing registers |    45 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    15 |
-| >= 0 to < 4        |     4 |
-| >= 4 to < 6        |     0 |
+| Total control sets |    19 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     1 |
-| >= 8 to < 10       |     0 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     1 |
-| >= 16              |     8 |
+| >= 16              |    11 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               9 |            5 |
+| No           | No                    | No                     |              10 |            6 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              63 |           16 |
-| Yes          | No                    | No                     |              79 |           33 |
+| Yes          | No                    | No                     |              78 |           28 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             204 |           60 |
+| Yes          | Yes                   | No                     |             268 |           86 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,21 +73,25 @@ Table of Contents
 +----------------+---------------------------+---------------------------+------------------+----------------+--------------+
 |  Clock Signal  |       Enable Signal       |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+---------------------------+---------------------------+------------------+----------------+--------------+
-|  clka_BUFG     | Vsync2_out                | Vsync_i_1_n_0             |                1 |              1 |         1.00 |
-|  clka_BUFG     | delay_counter[31]_i_2_n_0 |                           |                1 |              1 |         1.00 |
+|  clka_BUFG     | Vsync_i_2_n_0             | Vsync_i_1_n_0             |                1 |              1 |         1.00 |
 |  clka_BUFG     | R_out1                    | Hsync_i_1_n_0             |                1 |              1 |         1.00 |
 |  clk_IBUF_BUFG |                           |                           |                2 |              2 |         1.00 |
-|  clka_BUFG     |                           |                           |                3 |              7 |         2.33 |
-|  clka_BUFG     | R_out[3]_i_2_n_0          | R_out[3]_i_1_n_0          |                5 |             12 |         2.40 |
-|  clka_BUFG     | address0__1               |                           |                9 |             14 |         1.56 |
+|  clka_BUFG     | Img_left[8]_i_2_n_0       | Img_left[8]_i_1_n_0       |                2 |              5 |         2.50 |
+|  clka_BUFG     | Img_left[8]_i_2_n_0       | Img_right[8]_i_1_n_0      |                2 |              6 |         3.00 |
+|  clka_BUFG     |                           |                           |                4 |              8 |         2.00 |
+|  clka_BUFG     | R_out[3]_i_2_n_0          | R_out[3]_i_1_n_0          |                4 |             12 |         3.00 |
+|  clka_BUFG     | address0__2               |                           |               10 |             14 |         1.40 |
+|  clka_BUFG     | Img_left[31]_i_2_n_0      | Img_right[31]_i_1_n_0     |                9 |             26 |         2.89 |
+|  clka_BUFG     | Img_left[31]_i_2_n_0      | Img_left[31]_i_1_n_0      |                9 |             27 |         3.00 |
+|  clk_IBUF_BUFG |                           | clk25                     |                8 |             31 |         3.88 |
 |  clka_BUFG     | delay_counter[31]_i_2_n_0 | delay_counter[31]_i_1_n_0 |                8 |             31 |         3.88 |
 |  clka_BUFG     | Smooth_top[31]_i_2_n_0    | Smooth_top[31]_i_1_n_0    |                8 |             31 |         3.88 |
-|  clk_IBUF_BUFG |                           | clk25                     |                8 |             31 |         3.88 |
 |  clka_BUFG     |                           | p_1_in                    |                8 |             32 |         4.00 |
 |  clka_BUFG     | p_1_in                    | VC                        |                8 |             32 |         4.00 |
-|  clka_BUFG     | Smooth_bot[31]_i_1_n_0    | Smooth_top[31]_i_2_n_0    |               13 |             32 |         2.46 |
-|  clka_BUFG     | Img_bot[31]_i_1_n_0       |                           |               23 |             64 |         2.78 |
-|  clka_BUFG     | Img_left                  | Img_right[0]_i_1_n_0      |               16 |             64 |         4.00 |
+|  clka_BUFG     | Smooth_bot[31]_i_1_n_0    | Smooth_top[31]_i_2_n_0    |               11 |             32 |         2.91 |
+|  clka_BUFG     | Smooth_right[31]_i_2_n_0  | p_1_in                    |               15 |             32 |         2.13 |
+|  clka_BUFG     | VC_line                   | VC_line[0]_i_1_n_0        |                8 |             32 |         4.00 |
+|  clka_BUFG     | Img_bot[31]_i_1_n_0       |                           |               18 |             64 |         3.56 |
 +----------------+---------------------------+---------------------------+------------------+----------------+--------------+
 
 

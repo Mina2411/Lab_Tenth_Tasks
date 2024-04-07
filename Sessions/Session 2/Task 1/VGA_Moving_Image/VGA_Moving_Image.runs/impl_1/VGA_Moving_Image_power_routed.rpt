@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Thu Apr  4 02:17:32 2024
+| Date             : Sun Apr  7 18:21:32 2024
 | Host             : DESKTOP-FVC51P8 running 64-bit major release  (build 9200)
 | Command          : report_power -file VGA_Moving_Image_power_routed.rpt -pb VGA_Moving_Image_power_summary_routed.pb -rpx VGA_Moving_Image_power_routed.rpx
 | Design           : VGA_Moving_Image
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.060        |
+| Total On-Chip Power (W)  | 0.061        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.002        |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1639 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      727 |     20800 |            3.50 |
-|   CARRY4       |    <0.001 |      198 |      8150 |            2.43 |
-|   Register     |    <0.001 |      355 |     41600 |            0.85 |
+| Slice Logic    |    <0.001 |     2278 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1075 |     20800 |            5.17 |
+|   CARRY4       |    <0.001 |      288 |      8150 |            3.53 |
+|   Register     |    <0.001 |      419 |     41600 |            1.01 |
 |   Others       |     0.000 |       13 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |    <0.001 |      984 |       --- |             --- |
+| Signals        |    <0.001 |     1443 |       --- |             --- |
 | Block RAM      |     0.000 |        4 |        50 |            8.00 |
-| DSPs           |     0.000 |        4 |        90 |            4.44 |
+| DSPs           |    <0.001 |        6 |        90 |            6.67 |
 | I/O            |    <0.001 |       20 |       106 |           18.87 |
 | Static Power   |     0.059 |          |           |                 |
-| Total          |     0.060 |          |           |                 |
+| Total          |     0.061 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.008 |       0.002 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.008 |       0.003 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |

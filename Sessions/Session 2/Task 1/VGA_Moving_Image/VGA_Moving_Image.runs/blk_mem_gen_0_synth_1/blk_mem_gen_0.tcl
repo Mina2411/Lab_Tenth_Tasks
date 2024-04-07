@@ -88,7 +88,7 @@ set_property ip_output_repo {d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Se
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+read_ip -quiet {{D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
 set_property used_in_implementation false [get_files -all {{d:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session 2/Task 1/VGA_Moving_Image/VGA_Moving_Image.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }

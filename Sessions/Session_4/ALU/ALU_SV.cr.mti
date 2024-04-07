@@ -1,0 +1,8 @@
+D:/GUC/Semester_10/Advanced_Microelectronics_Lab/Sessions/Session_4/ALU/ALU.sv {1 {vlog -work work -vopt -sv -stats=none {D:\GUC\Semester_10\Advanced_Microelectronics_Lab\Sessions\Session_4\ALU\ALU.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}}

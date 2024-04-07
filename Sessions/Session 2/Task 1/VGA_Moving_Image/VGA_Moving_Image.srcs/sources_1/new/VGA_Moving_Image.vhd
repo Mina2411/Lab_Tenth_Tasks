@@ -71,6 +71,7 @@ end component;
     process (clk25)
         variable HC   : integer := 1; --Horizontal Counter
         variable VC   : integer := 1; --Vertical Counter
+        variable VC_line: integer := 1;
         
         variable Smooth_top: integer := 1; 
         variable Smooth_bot: integer := 1;
@@ -83,17 +84,30 @@ end component;
         if rising_edge(clk25) then
             if HC < H_RES + H_FP + H_SYNC + H_BP then --HorizontalActiveArea---800
                 if HC <= H_RES then --VisibleArea
-                    if(Img_bot > Img_top)then 
-                        if((HC >= Img_left and HC < Img_right) and ((VC >= Img_top and VC < Img_bot)) and reset = '0') then 
-                            R_out <= RGB_sig(11 downto 8);
-                            G_out <= RGB_sig(7 downto 4);
-                            B_out <= RGB_sig(3 downto 0);
-                            address <= address + 1;
-                        else
-                            R_out <= "0000";
-                            G_out <= "0000";
-                            B_out <= "0000";                    
-                        end if;
+                    if(Img_bot > Img_top)then
+                        if(Img_right > Img_left) then 
+                            if((HC >= Img_left and HC < Img_right) and ((VC >= Img_top and VC < Img_bot)) and reset = '0') then 
+                                R_out <= RGB_sig(11 downto 8);
+                                G_out <= RGB_sig(7 downto 4);
+                                B_out <= RGB_sig(3 downto 0);
+                                address <= address + 1;
+                            else
+                                R_out <= "0000";
+                                G_out <= "0000";
+                                B_out <= "0000";                    
+                            end if;
+                        else 
+                            if((HC >= Img_left or HC <= Img_right) and ((VC >= Img_top and VC < Img_bot)) and reset = '0') then 
+                                R_out <= RGB_sig(11 downto 8);
+                                G_out <= RGB_sig(7 downto 4);
+                                B_out <= RGB_sig(3 downto 0);
+                                address <= address + 1;
+                            else
+                                R_out <= "0000";
+                                G_out <= "0000";
+                                B_out <= "0000";                    
+                            end if;                            
+                        end if; 
                     else
                         if((HC >= Img_left and HC < Img_right) and ((VC >= Img_top or VC <= Img_bot)) and reset = '0') then 
                             R_out <= RGB_sig(11 downto 8);
@@ -184,6 +198,36 @@ end component;
                             delay_counter := 0;
                             Img_left := Img_left + 1; 
                             Img_right := Img_right + 1; 
+
+                            if (Img_right >= 640 or Img_right < Img_left) then
+                                if (Img_right >= 640)then
+                                    Img_right := 1;
+                                end if;
+                            
+                                if (Img_left >= 640)then
+                                    Img_left := 1;
+                                end if;
+                                
+                                if(address = (100 * VC_line) - 1) then
+                                    address <= address - "01100011";
+                                else 
+                                    if(Smooth_right = 100) then
+                                        Smooth_right := 1;
+                                    end if;
+                                    address <= std_logic_vector(TO_UNSIGNED((100 * VC_line) - Smooth_right,14));
+                                    
+                                end if;
+                                
+                                if(left = '0' and right = '1' and reset = '0') then 
+                                    if(Smooth_right = 100) then
+                                        Smooth_right := 1;
+                                    else
+                                        Smooth_right := Smooth_right + 1;            
+                                    end if;           
+                                end if;
+                                  
+                        end if;
+                        
                          else
                             delay_counter := delay_counter + 1;  
                          end if;  
@@ -213,22 +257,35 @@ end component;
                         end if;
                         VC := VC + 1;
                         
+                        if(VC >= Img_top and VC <= Img_bot and Img_right < Img_left) then
+                            if(VC_line > 100) then
+                                VC_line := 1;
+                            else
+                                VC_line := VC_line + 1;
+                            end if;
+                        end if;
+                        
                         if (address >= 9999) then
                             address <= (others => '0');
                         end if;
                         
+                        Smooth_right := 1;
+                                  
                     else --ResetVC
                         VC := 1;
-                        
-                        if(Img_top < Img_bot) then
+                        VC_line := 1;
+                        --Smooth_right := 1;
+                         
+                        if(Img_top < Img_bot and Img_right > Img_left) then
                             address <= (others => '0');
                         elsif(Smooth_bot > 1) then
                             address <= std_logic_vector(TO_UNSIGNED((9999-(100*Smooth_bot))+1,14));
                         elsif(Smooth_top > 1) then
                             --address <= std_logic_vector(TO_UNSIGNED((9999-(100*Smooth_top))+1,14)); 
-                             address <= std_logic_vector(TO_UNSIGNED((100*Smooth_top),14));                              
-                        end if;
-                         
+                             address <= std_logic_vector(TO_UNSIGNED((100*Smooth_top),14));  
+                        elsif(Img_right >= 640 or Img_left > Img_right) then
+                            address <= std_logic_vector(TO_UNSIGNED((100 * VC_line) - Smooth_right,14));                     
+                        end if;         
                    end if; 
             end if; --HorizontalActiveArea
         end if; -- risingEdge
